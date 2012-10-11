@@ -12,6 +12,7 @@ Call this to get access to the module functionality itself. E.g:
 var paginate = require('paginate')({
 	// options go here...
 });
+```
 
 ## Documentation
 
