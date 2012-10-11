@@ -1,0 +1,43 @@
+{
+  "name": "paginate",
+  "description": "Pagination. Especially useful with Mongoose + Express/Jade.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/tonymilne/paginate",
+  "author": {
+    "name": "Tony Milne",
+    "url": "http://tonymilne.com.au"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tonymilne/paginate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tonymilne/paginate/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/tonymilne/paginate/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "lib/paginate",
+  "engines": {
+    "node": ">= 0.6.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "mongoose": "~3.2.1",
+    "grunt": "~0.3.15",
+    "should": "~1.2.0",
+    "mocha": "~1.5.0",
+    "grunt-simple-mocha": "~0.2.0",
+    "step": "0.0.5"
+  },
+  "keywords": [],
+  "dependencies": {
+    "underscore": "~1.4.1",
+    "jade": "~0.27.6"
+  }
+}

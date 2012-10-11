@@ -1,0 +1,13 @@
+.pagination
+	ul
+		if currentPage.previousPage
+			include previous
+
+		each page, i in pages
+			if page.inLeftOuter || page.inInner || page.inRightOuter
+				include page
+			else if !page.previousPage.isSeparator
+				include separator
+
+		if currentPage.nextPage
+			include next
