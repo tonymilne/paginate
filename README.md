@@ -47,7 +47,7 @@ var Post = mongoose.model('posts');
 // An express route action:
 app.get('/posts', function(req, res, next) {
 	Post.find()
-	.paginate({ page: req.params.page }, function(err, posts) {
+	.paginate({ page: req.query.page }, function(err, posts) {
 		res.render('posts/index', {
 			posts: posts
 		})
