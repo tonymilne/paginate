@@ -1,6 +1,6 @@
 .pagination
 	ul
-		if currentPage.previousPage
+		if currentPage && currentPage.previousPage
 			include previous
 
 		each page, i in pages
@@ -9,5 +9,5 @@
 			else if !page.previousPage.isSeparator
 				include separator
 
-		if currentPage.nextPage
+		if currentPage && currentPage.nextPage
 			include next

@@ -65,7 +65,11 @@ E.g. in Jade, this might look like:
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt](https://github.com/cowboy/grunt).
 
 ## Release History
-_(Nothing yet)_
+
+### 0.1.1
+
+- FIX: Queries with 0 results caused an invalid skip value to throw an error.
+- FIX: Typo in the readme params to query.
 
 ## License
 Copyright (c) 2012 Tony Milne

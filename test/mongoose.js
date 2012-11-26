@@ -93,6 +93,26 @@ describe('Paginate', function() {
 			});
 		});
 
+		it('should handle queries with a count of 0 documents', function(done) {
+			Example.find({ foobar: 'lorem' })
+			.paginate({ page: 1 }, function(err, examples) {
+				if (err) {
+					throw err;
+				}
+
+				// The examples array will contain those example from page 6,
+				// E.g. page 1 has values: 1 ... 10, page 6 has values: 51 ... 60.
+
+				examples.should.have.length(0);
+
+				var paging = examples.pagination;
+
+				// 1 ... 4, 5, [6], 7, 8 ... 10.
+
+				done();
+			});
+		});
+
 	});
 
 });
