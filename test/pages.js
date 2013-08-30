@@ -46,6 +46,10 @@ describe('Paginate', function() {
 			paging.pages[4].should.have.property('page', 10);
 			paging.pages[4].should.have.property('isLast', true);
 
+			paging.should.have.property('count', data.length);
+			paging.should.have.property('perPage', PER_PAGE);
+			paging.currentPage.should.have.property('page', 1);
+
 			done();
 		});
 
