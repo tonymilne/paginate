@@ -55,16 +55,33 @@ app.get('/posts', function(req, res, next) {
 });
 ```
 
+optionally, you can control the paging size for mongoose using the following:
+
+```
+Post.find().paginate({ page: req.query.page, perPage: 5 }, callback);
+```
+
 Then in the posts/index template, you could include the html generated from posts.pagination.render().
 E.g. in Jade, this might look like:
 ```
 != posts.pagination.render({ baseUrl: '/posts })
+```
+## Persisting Additional QueryString Parameters
+For cases where you might need to persist other values while paging, you can pass the req.query object forward:
+```
+Post.find().paginate({ page: req.query.page, query: req.query }, function(err, posts){
+...
+});
 ```
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt](https://github.com/cowboy/grunt).
 
 ## Release History
+
+### 0.1.2
+
+- ADDITION: Ability to persist additional querystring params.
 
 ### 0.1.1
 
