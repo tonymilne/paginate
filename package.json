@@ -1,7 +1,7 @@
 {
   "name": "paginate",
   "description": "Pagination. Especially useful with Mongoose + Express/Jade.",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "homepage": "https://github.com/tonymilne/paginate",
   "author": {
     "name": "Tony Milne",
