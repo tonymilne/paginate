@@ -1,7 +1,9 @@
+/* global describe, it */
+
 var should = require('should');
 var paginate = require('../index')({
 	// No options passed...
-	mongoose: false,
+	mongoose: false
 });
 
 var PER_PAGE = 10;

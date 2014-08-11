@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 
 	// Project configuration.
 	grunt.initConfig({
-		pkg: '<json:package.json>',
+		pkg: grunt.file.readJSON('package.json'),
 		test: {
 			files: ['test/**/*.js']
 		},
@@ -12,7 +12,11 @@ module.exports = function(grunt) {
 			all: {
 				src: 'test/**/*.js',
 				options: {
-					globals: ['describe', 'it', 'before'],
+					globals: {
+                        describe: true,
+                        it: true,
+                        before: true
+                    },
 					timeout: 3000,
 					ignoreLeaks: false
 					// ui: 'bdd',
@@ -20,14 +24,14 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		lint: {
-			files: ['grunt.js', 'lib/**/*.js', 'test/**/*.js']
-		},
 		watch: {
-			files: '<config:lint.files>',
+			files: '<%= config:lint.files %>',
 			tasks: 'default'
 		},
 		jshint: {
+            all: {
+                src: ['Gruntfile.js', 'lib/**/*.js', 'test/**/*.js']
+            },
 			options: {
 				smarttabs: true,
 				trailing: true,
@@ -42,7 +46,7 @@ module.exports = function(grunt) {
 				boss: true,
 				eqnull: true,
 				node: true,
-				es5: true
+                es5: false
 			},
 			globals: {
 				describe: true,
@@ -58,7 +62,10 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-simple-mocha');
 	grunt.registerTask('test', 'simplemocha');
 
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.registerTask('lint', 'jshint');
+
 	// Default task.
-	grunt.registerTask('default', 'lint test');
+	grunt.registerTask('default', ['lint', 'test']);
 
 };

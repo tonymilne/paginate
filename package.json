@@ -38,6 +38,7 @@
   "keywords": [],
   "dependencies": {
     "underscore": "~1.4.1",
-    "jade": "~0.27.6"
+    "jade": "~0.27.6",
+    "grunt-contrib-jshint": "^0.10.0"
   }
 }
