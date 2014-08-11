@@ -2,4 +2,4 @@ li
 	if page.isCurrent
 		a.active #{page.page}
 	else
-		a(href='#{baseUrl}?page=#{page.page}') #{page.page}
+		a(href='#{baseUrl}#{concatinator}page=#{page.page}') #{page.page}

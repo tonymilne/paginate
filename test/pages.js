@@ -1,3 +1,5 @@
+/* global describe, it */
+
 var should = require('should');
 var paginate = require('../index')({
 	// No options passed...

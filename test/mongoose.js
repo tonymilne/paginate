@@ -1,3 +1,5 @@
+/* global describe, it, before */
+
 var should = require('should');
 var step = require('step');
 
