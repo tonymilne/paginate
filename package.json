@@ -1,7 +1,7 @@
 {
   "name": "paginate",
   "description": "Pagination. Especially useful with Mongoose + Express/Jade.",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "homepage": "https://github.com/tonymilne/paginate",
   "author": {
     "name": "Tony Milne",
@@ -25,19 +25,21 @@
     "node": ">= 0.6.0"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "NODE_ENV=test ./node_modules/mocha/bin/mocha --bail"
   },
   "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.11.3",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-simple-mocha": "^0.4.0",
+    "mocha": "^2.3.1",
     "mongoose": "~3.2.1",
-    "grunt": "~0.3.15",
-    "should": "~1.2.0",
-    "mocha": "~1.5.0",
-    "grunt-simple-mocha": "~0.2.0",
-    "step": "0.0.5"
+    "should": "^7.1.0",
+    "step": "0.0.6"
   },
   "keywords": [],
   "dependencies": {
-    "underscore": "~1.4.1",
-    "jade": "~0.27.6"
+    "jade": "^1.11.0",
+    "lodash": "^3.10.1"
   }
 }
