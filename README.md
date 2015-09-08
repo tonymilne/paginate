@@ -62,9 +62,15 @@ E.g. in Jade, this might look like:
 ```
 
 ## Contributing
+
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt](https://github.com/cowboy/grunt).
 
 ## Release History
+
+### 0.2.0
+
+- UPDATE: Dependencies updated to newer versions (including Grunt).
+- UPDATE: Template and CSS classes updated to better match Twitter Bootstrap pagination.
 
 ### 0.1.1
 
