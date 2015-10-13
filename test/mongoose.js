@@ -44,6 +44,29 @@ describe('Paginate', function() {
 		);
 	});
 
+	describe('options', function() {
+    
+    it('should not clamp to the last page if the user sets the correct option', function(done) {
+			Example.find()
+			.sort({ value: 1 })
+			.paginate({ page: 6000, clampToLastPage: false }, function(err, examples) {
+        examples.should.have.length(0);
+
+        done();
+			});
+    });
+
+    it('should clamp to the last page if no option is given', function(done) {
+			Example.find()
+			.sort({ value: 1 })
+			.paginate({ page: 6000 }, function(err, examples) {
+        examples.should.have.length(5);
+
+        done();
+			});
+    });
+  });
+
 	describe('#render', function() {
 
 		it('should return the array of example models with a .pagination property', function(done) {
