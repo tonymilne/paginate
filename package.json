@@ -25,7 +25,9 @@
     "node": ">= 0.6.0"
   },
   "scripts": {
-    "test": "NODE_ENV=test ./node_modules/mocha/bin/mocha --bail"
+    "test": "NODE_ENV=test ./node_modules/mocha/bin/mocha --bail",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
@@ -40,6 +42,8 @@
   "keywords": [],
   "dependencies": {
     "jade": "^1.11.0",
-    "lodash": "^3.10.1"
-  }
+    "lodash": "^4.17.5",
+    "snyk": "^1.70.2"
+  },
+  "snyk": true
 }
