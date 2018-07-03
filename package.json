@@ -43,7 +43,7 @@
   "dependencies": {
     "jade": "^1.11.0",
     "lodash": "^4.17.5",
-    "snyk": "^1.70.2"
+    "snyk": "^1.88.1"
   },
   "snyk": true
 }
